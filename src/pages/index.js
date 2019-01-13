@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './index.css';
 import Video from './video';
-import track from '../audio/roses-temp.mp3';
+import track from '../audio/roses.m4a';
 
 class Index extends Component {
   constructor(props) {
@@ -9,13 +9,13 @@ class Index extends Component {
     this.state = {
       video: false,
       questionBank: [
-        'what makes you feel welcome?',
-        'what types of sounds trigger nostalgia in you?',
-        'what was the end of the beginning?',
-        'how do you take off your mask?',
-        'what would your current day self tell your younger self?',
-        'what would your future self tell your current self?',
-        'make up a nickname for yourself',
+        'What makes you feel welcome?',
+        'What types of sounds trigger nostalgia in you?',
+        'What was the end of the beginning?',
+        'How do you take off your mask?',
+        'What would your current day self tell your younger self?',
+        'What would your future self tell your current self?',
+        'Give yourself a new name',
       ],
     };
     this.shuffleArr = this.shuffleArr.bind(this);
