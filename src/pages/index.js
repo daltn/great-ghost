@@ -77,7 +77,7 @@ class Index extends Component {
           onSubmit={this.handleSubmit}
           className={this.state.video ? 'fadeOut' : 'normForm'}
         >
-          <h1>welcome to the dance</h1>
+          <h1>Welcome To The Dance</h1>
           {this.state.questionBank.slice(0, 3).map((ques, idx) => {
             return (
               <div id="questions" key={idx}>
@@ -94,6 +94,7 @@ class Index extends Component {
           <p>Have you been naked this whole time or are you just beginning?</p>
 
           <button
+            id="buttons"
             type="submit"
             value="Just Beginning"
             onClick={this.handlePlay}
@@ -101,6 +102,7 @@ class Index extends Component {
             This Whole Time
           </button>
           <button
+            id="buttons"
             type="submit"
             value="Just Beginning"
             onClick={this.handlePlay}

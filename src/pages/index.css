@@ -33,7 +33,7 @@
 }
 
 h1 {
-  font-size: 10vh;
+  font-size: 8vh;
   color: #34c3d6;
 }
 
@@ -41,6 +41,20 @@ h1 {
   display: block;
   margin: auto;
   font-size: 5vh;
+  text-align: center;
+  color: white;
+  background: transparent;
+  border: white solid 1px;
+  width: 80%;
+}
+
+.formInput:focus {
+  display: block;
+  margin: auto;
+  font-size: 5vh;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .normForm {
@@ -50,6 +64,30 @@ h1 {
 
 .fadeOut {
   opacity: 0;
+}
+
+#buttons {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  padding: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5vh;
+  margin-right: 2vw;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: white;
+  color: #34c3d6;
+}
+
+#questions {
+  padding: 2vh 2vw;
 }
 
 body {
