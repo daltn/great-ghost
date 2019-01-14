@@ -34,9 +34,9 @@
 
 #welcome {
   position: fixed;
-  padding-bottom: 20vw;
+  padding-bottom: 15vw;
   text-align: center;
-  margin: 20vh 34vw 0 0;
+  margin: 28vh 20vw 0 0;
   transform: rotate(270deg);
   transform-origin: bottom left 0;
   color: #2e75f1;
