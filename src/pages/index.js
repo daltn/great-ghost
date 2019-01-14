@@ -73,8 +73,11 @@ class Index extends Component {
   render() {
     return (
       <div id="bod">
-        <h1>welcome to the dance</h1>
-        <form onSubmit={this.handleSubmit} id="form">
+        <form
+          onSubmit={this.handleSubmit}
+          className={this.state.video ? 'fadeOut' : 'normForm'}
+        >
+          <h1>welcome to the dance</h1>
           {this.state.questionBank.slice(0, 3).map((ques, idx) => {
             return (
               <div id="questions" key={idx}>

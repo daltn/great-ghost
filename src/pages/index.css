@@ -32,3 +32,12 @@ h1 {
   font-size: 10vh;
   color: teal;
 }
+
+.normForm {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+}
