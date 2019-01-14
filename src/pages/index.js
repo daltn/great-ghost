@@ -9,7 +9,7 @@ class Index extends Component {
     super(props);
     this.state = {
       video: true,
-      textBool: false,
+      textBool: true,
       questionBank: [
         'What makes you feel welcome?',
         'What types of sounds trigger nostalgia in you?',
@@ -50,14 +50,17 @@ class Index extends Component {
     });
     this.audio.play();
     setTimeout(() => {
+      this.setState({ textBool: false });
+    }, 3000);
+    setTimeout(() => {
       this.setState({ textBool: true });
-    }, 4000);
+    }, 13000);
     setTimeout(() => {
       this.setState({ textBool: false });
-    }, 12000);
+    }, 23000);
     setTimeout(() => {
       this.setState({ textBool: true });
-    }, 28000);
+    }, 38000);
   }
 
   handleSubmit(e) {
