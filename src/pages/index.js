@@ -59,7 +59,7 @@ class Index extends Component {
     }, 23000);
     setTimeout(() => {
       this.setState({ textBool: true });
-    }, 38000);
+    }, 30000);
   }
 
   handleSubmit(e) {
