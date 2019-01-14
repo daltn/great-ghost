@@ -8,7 +8,7 @@ class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      video: false,
+      video: true,
       questionBank: [
         'What makes you feel welcome?',
         'What types of sounds trigger nostalgia in you?',
@@ -32,6 +32,7 @@ class Index extends Component {
 
   componentDidMount() {
     this.setState({
+      video: !this.state.video,
       questionBank: this.shuffleArr(this.state.questionBank),
     });
   }
@@ -40,7 +41,6 @@ class Index extends Component {
     this.setState({
       answers: { ...this.state.answers, ['ans' + e.target.id]: e.target.value },
     });
-    console.log(this.state);
   }
 
   handlePlay() {
