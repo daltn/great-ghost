@@ -29,12 +29,20 @@
   color: white;
   text-align: center;
   font-size: 8vh;
-  padding: 0vh 15vw 2vh 15vw;
+  padding: 0vh 15vw 30vh 15vw;
 }
 
-h1 {
-  font-size: 8vh;
+#welcome {
   color: #34c3d6;
+}
+
+#questions {
+  margin-bottom: 40vh;
+}
+
+.ansr {
+  position: sticky;
+  color: white;
 }
 
 .formInput {
@@ -42,31 +50,30 @@ h1 {
   margin: auto;
   font-size: 5vh;
   text-align: center;
-  color: white;
+  color: #34c3d6;
   background: transparent;
   border: white solid 1px;
   width: 80%;
+  padding: 2vh 2vw;
+  margin-top: 4vh;
 }
 
 .formInput:focus {
-  display: block;
-  margin: auto;
-  font-size: 5vh;
   background: transparent;
-  border: none;
+  color: white;
   outline: none;
 }
 
 .normForm {
   opacity: 1;
-  transition: all 2s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
 .fadeOut {
   opacity: 0;
 }
 
-#buttons {
+button {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 8px;

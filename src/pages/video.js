@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Video = () => (
+const Video = props => (
   <div className="vimeo-wrapper">
     <iframe
       title="roses"
@@ -11,6 +11,14 @@ const Video = () => (
       mozallowfullscreen="true"
       allowFullScreen={true}
     />
+    {console.log(props.answers)}
+    {props.answers.map((ansr, idx) => {
+      return (
+        <div key={idx} id={idx} className="ansr">
+          <h1>{ansr}</h1>
+        </div>
+      );
+    })}
   </div>
 );
 

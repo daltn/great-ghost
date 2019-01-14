@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Video from './video';
+import down from '../img/chev-down.png';
 import track from '../audio/roses.m4a';
 
 class Index extends Component {
@@ -17,11 +18,7 @@ class Index extends Component {
         'What would your future self tell your current self?',
         'Give yourself a new name',
       ],
-      answers: {
-        ans0: '',
-        ans1: '',
-        ans2: '',
-      },
+      answers: {},
     };
     this.handleChange = this.handleChange.bind(this);
     this.shuffleArr = this.shuffleArr.bind(this);
@@ -37,11 +34,9 @@ class Index extends Component {
 
   handleChange(e) {
     this.setState({
-      answers: {
-        ['ans' + e.target.id]: e.target.value,
-      },
+      answers: { ...this.state.answers, ['ans' + e.target.id]: e.target.value },
     });
-    console.log(this.state.answers);
+    console.log(this.state);
   }
 
   handlePlay() {
@@ -73,50 +68,58 @@ class Index extends Component {
   render() {
     return (
       <div id="bod">
-        <form
-          onSubmit={this.handleSubmit}
-          className={this.state.video ? 'fadeOut' : 'normForm'}
-        >
-          <h1>Welcome To The Dance</h1>
-          {this.state.questionBank.slice(0, 3).map((ques, idx) => {
-            return (
-              <div id="questions" key={idx}>
-                <label htmlFor="question">{ques}</label>
-                <input
-                  type="text"
-                  id={idx}
-                  className="formInput"
-                  onChange={this.handleChange}
-                />
-              </div>
-            );
-          })}
-          <p>Have you been naked this whole time or are you just beginning?</p>
-
-          <button
-            id="buttons"
-            type="submit"
-            value="Just Beginning"
-            onClick={this.handlePlay}
+        <div>
+          {this.state.video && (
+            <Video answers={Object.values(this.state.answers)} />
+          )}
+          <audio
+            ref={audio => {
+              this.audio = audio;
+            }}
+            src={track}
+          />
+        </div>
+        <div>
+          <form
+            onSubmit={this.handleSubmit}
+            className={this.state.video ? 'fadeOut' : 'normForm'}
           >
-            This Whole Time
-          </button>
-          <button
-            id="buttons"
-            type="submit"
-            value="Just Beginning"
-            onClick={this.handlePlay}
-          >
-            Just Beginning
-          </button>
-        </form>
-        {this.state.video && <Video />}
-        <audio
-          ref={audio => {
-            this.audio = audio;
-          }}
-          src={track}
-        />
+            <p id="welcome">Welcome To The Dance</p>
+            {this.state.questionBank.slice(0, 3).map((ques, idx) => {
+              return (
+                <div id="questions" key={idx}>
+                  <label htmlFor="question">{ques}</label>
+                  <input
+                    type="text"
+                    id={idx}
+                    className="formInput"
+                    onChange={this.handleChange}
+                  />
+                  <img src={down} alt="down" id="chevron" />
+                </div>
+              );
+            })}
+            <p>
+              Have you been naked this whole time or are you just beginning?
+            </p>
+            <button
+              id="buttons"
+              type="submit"
+              value="Just Beginning"
+              onClick={this.handlePlay}
+            >
+              This Whole Time
+            </button>
+            <button
+              id="buttons"
+              type="submit"
+              value="Just Beginning"
+              onClick={this.handlePlay}
+            >
+              Just Beginning
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
