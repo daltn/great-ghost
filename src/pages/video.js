@@ -11,7 +11,7 @@ const Video = props => (
       mozallowfullscreen="true"
       allowFullScreen={true}
     />
-    {console.log(props.answers)}
+
     {props.answers.map((ansr, idx) => {
       return (
         <div key={idx} id={idx} className="ansr">
