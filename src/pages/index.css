@@ -20,6 +20,14 @@
   transform: translate(-50%, -50%);
 }
 
+#bod {
+  position: absolute;
+  text-align: center;
+  top: 5vh;
+  right: 0;
+  left: 0;
+}
+
 h1 {
   font-size: 10vh;
   color: teal;

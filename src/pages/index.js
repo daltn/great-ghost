@@ -17,8 +17,31 @@ class Index extends Component {
         'What would your future self tell your current self?',
         'Give yourself a new name',
       ],
+      answers: {
+        ans0: '',
+        ans1: '',
+        ans2: '',
+      },
     };
+    this.handleChange = this.handleChange.bind(this);
     this.shuffleArr = this.shuffleArr.bind(this);
+    this.handlePlay = this.handlePlay.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      questionBank: this.shuffleArr(this.state.questionBank),
+    });
+  }
+
+  handleChange(e) {
+    this.setState({
+      answers: {
+        ['ans' + e.target.id]: e.target.value,
+      },
+    });
+    console.log(this.state.answers);
   }
 
   handlePlay() {
@@ -26,6 +49,10 @@ class Index extends Component {
       video: true,
     });
     this.audio.play();
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   shuffleArr(array) {
@@ -44,24 +71,42 @@ class Index extends Component {
   }
 
   render() {
-    let quesReady = this.shuffleArr(this.state.questionBank);
     return (
-      <div>
+      <div id="bod">
+        <h1>welcome to the dance</h1>
+        <form onSubmit={this.handleSubmit} id="form">
+          {this.state.questionBank.slice(0, 3).map((ques, idx) => {
+            return (
+              <div id="questions" key={idx}>
+                <label htmlFor="question">{ques}</label>
+                <input type="text" id={idx} onChange={this.handleChange} />
+              </div>
+            );
+          })}
+          <label htmlFor="question">
+            Have you been naked this whole time or are you just beginning?
+          </label>
+          <button
+            type="submit"
+            value="Just Beginning"
+            onClick={this.handlePlay}
+          >
+            This Whole Time
+          </button>
+          <button
+            type="submit"
+            value="Just Beginning"
+            onClick={this.handlePlay}
+          >
+            Just Beginning
+          </button>
+        </form>
         {this.state.video && <Video />}
-        <h1>bloop</h1>
         <audio
           ref={audio => {
             this.audio = audio;
           }}
           src={track}
-        />
-        {quesReady.slice(0, 3).map(ques => {
-          return <p>{ques}</p>;
-        })}
-        <input
-          type="button"
-          value="Play"
-          onClick={this.handlePlay.bind(this)}
         />
       </div>
     );
