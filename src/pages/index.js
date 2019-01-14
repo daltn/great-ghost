@@ -9,6 +9,7 @@ class Index extends Component {
     super(props);
     this.state = {
       video: true,
+      textBool: false,
       questionBank: [
         'What makes you feel welcome?',
         'What types of sounds trigger nostalgia in you?',
@@ -48,6 +49,15 @@ class Index extends Component {
       video: true,
     });
     this.audio.play();
+    setTimeout(() => {
+      this.setState({ textBool: true });
+    }, 4000);
+    setTimeout(() => {
+      this.setState({ textBool: false });
+    }, 12000);
+    setTimeout(() => {
+      this.setState({ textBool: true });
+    }, 28000);
   }
 
   handleSubmit(e) {
@@ -74,7 +84,10 @@ class Index extends Component {
       <div id="bod">
         <div>
           {this.state.video && (
-            <Video answers={Object.values(this.state.answers)} />
+            <Video
+              answers={Object.values(this.state.answers)}
+              textBool={this.state.textBool}
+            />
           )}
           <audio
             ref={audio => {
