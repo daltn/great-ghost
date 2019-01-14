@@ -45,6 +45,21 @@
   color: white;
 }
 
+h1 {
+  position: relative;
+  color: red;
+}
+
+#ans0 {
+  color: blue;
+}
+#ans1 {
+  text-align: left;
+}
+#ans2 {
+  color: pink;
+}
+
 .formInput {
   display: block;
   margin: auto;

@@ -14,8 +14,8 @@ const Video = props => (
     {props.answers !== undefined ? (
       props.answers.map((ansr, idx) => {
         return (
-          <div key={idx} id={idx} className="ansr">
-            <h1>{ansr}</h1>
+          <div key={idx} className="ansr">
+            <h1 id={'ans' + idx}>{ansr}</h1>
           </div>
         );
       })
