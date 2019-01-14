@@ -11,6 +11,7 @@
   overflow: hidden;
   background-color: black;
 }
+
 .vimeo-wrapper iframe {
   width: 100vw;
   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
@@ -23,19 +24,23 @@
 }
 
 #bod {
-  position: absolute;
+  position: flex;
   font-family: 'Rubik', sans-serif;
+  color: white;
   text-align: center;
   font-size: 8vh;
-  top: 1vh;
-  bottom: 2vh;
-  right: 12vw;
-  left: 12vw;
+  padding: 0vh 15vw 2vh 15vw;
 }
 
 h1 {
   font-size: 10vh;
-  color: teal;
+  color: #34c3d6;
+}
+
+.formInput {
+  display: block;
+  margin: auto;
+  font-size: 5vh;
 }
 
 .normForm {
@@ -45,4 +50,48 @@ h1 {
 
 .fadeOut {
   opacity: 0;
+}
+
+body {
+  background: linear-gradient(#d9c0e2, #2e75f1, #34c3d6, #dd5fd7);
+  background-size: 300% 300%;
+  -webkit-animation: Gradient 30s ease-in-out infinite;
+  -moz-animation: Gradient 30s ease-in-out infinite;
+  animation: Gradient 30s ease-in-out infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
 }

@@ -82,7 +82,12 @@ class Index extends Component {
             return (
               <div id="questions" key={idx}>
                 <label htmlFor="question">{ques}</label>
-                <input type="text" id={idx} onChange={this.handleChange} />
+                <input
+                  type="text"
+                  id={idx}
+                  className="formInput"
+                  onChange={this.handleChange}
+                />
               </div>
             );
           })}
