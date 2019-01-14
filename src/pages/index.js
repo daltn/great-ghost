@@ -18,7 +18,11 @@ class Index extends Component {
         'What would your future self tell your current self?',
         'Give yourself a new name',
       ],
-      answers: {},
+      answers: {
+        ans0: '',
+        ans1: '',
+        ans2: '',
+      },
     };
     this.handleChange = this.handleChange.bind(this);
     this.shuffleArr = this.shuffleArr.bind(this);
