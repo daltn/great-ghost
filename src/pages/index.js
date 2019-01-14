@@ -48,18 +48,9 @@ class Index extends Component {
       video: true,
     });
     this.audio.play();
-    setTimeout(() => {
-      this.setState({ textBool: false });
-    }, 3000);
-    setTimeout(() => {
-      this.setState({ textBool: true });
-    }, 13000);
-    setTimeout(() => {
-      this.setState({ textBool: false });
-    }, 23000);
-    setTimeout(() => {
-      this.setState({ textBool: true });
-    }, 30000);
+    setInterval(() => {
+      this.setState({ textBool: !this.state.textBool });
+    }, 8000);
   }
 
   handleSubmit(e) {
