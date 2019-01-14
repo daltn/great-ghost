@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './index.css';
+import './index.css';
 import Video from './video';
 import track from '../audio/roses.m4a';
 
@@ -86,9 +86,8 @@ class Index extends Component {
               </div>
             );
           })}
-          <label htmlFor="question">
-            Have you been naked this whole time or are you just beginning?
-          </label>
+          <p>Have you been naked this whole time or are you just beginning?</p>
+
           <button
             type="submit"
             value="Just Beginning"

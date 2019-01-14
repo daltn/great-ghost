@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 .vimeo-wrapper {
   position: fixed;
   top: 0;
@@ -22,10 +24,13 @@
 
 #bod {
   position: absolute;
+  font-family: 'Rubik', sans-serif;
   text-align: center;
-  top: 5vh;
-  right: 0;
-  left: 0;
+  font-size: 8vh;
+  top: 1vh;
+  bottom: 2vh;
+  right: 12vw;
+  left: 12vw;
 }
 
 h1 {
@@ -35,7 +40,7 @@ h1 {
 
 .normForm {
   opacity: 1;
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .fadeOut {
