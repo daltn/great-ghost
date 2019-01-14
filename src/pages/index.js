@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
 import Video from './video';
-import down from '../img/chev-down.png';
 import track from '../audio/roses.m4a';
 
 class Index extends Component {
@@ -115,7 +114,6 @@ class Index extends Component {
                     className="formInput"
                     onChange={this.handleChange}
                   />
-                  <img src={down} alt="down" id="chevron" />
                 </div>
               );
             })}

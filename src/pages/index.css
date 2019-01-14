@@ -27,31 +27,40 @@
   position: flex;
   font-family: 'Rubik', sans-serif;
   color: white;
-  text-align: center;
-  font-size: 8vh;
-  padding: 0vh 15vw 30vh 15vw;
+  text-align: left;
+  font-size: 5vh;
+  padding: 4vh 30vw 20vh 30vw;
 }
 
 #welcome {
-  color: #34c3d6;
+  position: fixed;
+  padding-bottom: 20vw;
+  text-align: center;
+  margin: 20vh 34vw 0 0;
+  transform: rotate(270deg);
+  transform-origin: bottom left 0;
+  color: #2e75f1;
 }
 
 #questions {
-  margin-bottom: 40vh;
+  margin-bottom: 10vh;
 }
 
 h1 {
-  position: sticky;
+  font-size: 10vh;
   color: white;
+  text-align: center;
 }
 
 #ansrBefore0 {
+  font-size: 10vh;
   margin-right: 20vw;
   opacity: 0.6;
   transition: all 8s ease-out;
 }
 
 #ansrAfter0 {
+  font-size: 3vh;
   margin-right: 15vw;
   opacity: 0;
   transition: all 8s ease-out;
@@ -65,7 +74,7 @@ h1 {
 }
 
 #ansrAfter1 {
-  margin-left: 10vw;
+  margin-left: 50vw;
   width: 0;
   opacity: 0;
   transition: all 8s ease-out;
@@ -87,12 +96,13 @@ h1 {
   display: block;
   margin: auto;
   font-size: 5vh;
-  text-align: center;
-  color: #34c3d6;
+  text-align: left;
+  color: #2e75f1;
   background: transparent;
   border: white solid 1px;
-  width: 80%;
-  padding: 2vh 2vw;
+  border-radius: 8px;
+  width: 100%;
+  padding: 2vh;
   margin-top: 4vh;
 }
 
@@ -117,6 +127,7 @@ button {
   border-radius: 8px;
   color: white;
   padding: 1vh 1vw;
+  margin-bottom: 3vh;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -128,11 +139,7 @@ button {
 
 button:hover {
   background-color: white;
-  color: #34c3d6;
-}
-
-#questions {
-  padding: 2vh 2vw;
+  color: #2e75f1;
 }
 
 body {
