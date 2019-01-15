@@ -13,4 +13,5 @@ Dalton Saffe - artist / developer
 ## Notes
 
 Built from: [gatsby hello-world starter](https://github.com/gatsbyjs/gatsby-starter-hello-world)
+
 Typeface: [Rubik](https://fonts.google.com/specimen/Rubik)
