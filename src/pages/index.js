@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import './index.css';
 import Video from './video';
 import track from '../audio/roses.m4a';
@@ -75,6 +76,11 @@ class Index extends Component {
   render() {
     return (
       <div id="bod">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Nudity For Beginners</title>
+          <link rel="canonical" href="https://nudityforbeginners.com" />
+        </Helmet>
         <div>
           {this.state.video && (
             <Video
