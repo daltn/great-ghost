@@ -2,7 +2,7 @@
 
 Web-based audio/visual piece made in collaboration with artist/musician, Sean Kravit.
 
-The design of the piece was influenced by the idea of nudity as a metaphor for emotional vulnerability. A bank of questions are shuffled using the Fisher-Yates algorithm and the first three are displayed to the user which probes the user's notions of their ego & thought process. The user's answers are then embedded and animated as a part of the music video.
+This piece was influenced by the idea of nudity as a metaphor for emotional vulnerability. A bank of questions are shuffled and three of them are displayed to the user. These questions examine the notion of ego & self-reflection. The answers are then embedded and animated as a part of the music video.
 
 [https://nudityforbeginners.com/](https://nudityforbeginners.com/)
 
