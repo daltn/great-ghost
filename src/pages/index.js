@@ -11,13 +11,12 @@ class Index extends Component {
       video: true,
       textBool: true,
       questionBank: [
-        'What makes you feel welcome?',
-        'What types of sounds trigger nostalgia in you?',
-        'What was the end of the beginning?',
-        'How do you take off your mask?',
-        'What would your current day self tell your younger self?',
-        'What would your future self tell your current self?',
+        "What's your mantra?",
+        'What would the future you tell your current self?',
         'Give yourself a new name',
+        'How can you be better?',
+        'Where do you see yourself in forty minutes?',
+        'Describe your dance',
       ],
       answers: {
         ans0: '',
