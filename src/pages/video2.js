@@ -1,10 +1,19 @@
 import React from 'react';
+import snoop from '../audio/Snoop-audio.mp3';
 
 const Video2 = props => {
   return (
     <div className="vimeo-wrapper">
+      <audio
+        ref={audio => {
+          return 'audio_tag';
+        }}
+        src={snoop}
+        controls
+        autoPlay
+      />
       <iframe
-        title="roses"
+        title="snoop"
         id="video"
         src="https://player.vimeo.com/video/317325586?background=1&autoplay=1&muted=1&byline=0&title=0"
         frameBorder="0"

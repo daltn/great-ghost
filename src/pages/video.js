@@ -1,8 +1,17 @@
 import React from 'react';
+import roses from '../audio/roses.m4a';
 
 const Video = props => {
   return (
     <div className="vimeo-wrapper">
+      <audio
+        ref={audio => {
+          return 'audio_tag';
+        }}
+        src={roses}
+        controls
+        autoPlay
+      />
       <iframe
         title="roses"
         id="video"

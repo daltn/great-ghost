@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import './index.css';
 import Video from './video';
-import track from '../audio/roses.m4a';
+import Video2 from './video2';
 
 class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
       video: true,
+      snoopVid: true,
       textBool: true,
       questionBank: [
         "What's your mantra?",
@@ -28,11 +29,13 @@ class Index extends Component {
     this.shuffleArr = this.shuffleArr.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSnoopVid = this.handleSnoopVid.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       video: !this.state.video,
+      snoopVid: !this.state.snoopVid,
       questionBank: this.shuffleArr(this.state.questionBank),
     });
   }
@@ -47,10 +50,20 @@ class Index extends Component {
     this.setState({
       video: true,
     });
-    this.audio.play();
+
     setInterval(() => {
       this.setState({ textBool: !this.state.textBool });
     }, 8000);
+  }
+
+  handleSnoopVid() {
+    this.setState({
+      snoopVid: true,
+    });
+
+    setInterval(() => {
+      this.setState({ textBool: !this.state.textBool });
+    }, 6000);
   }
 
   handleSubmit(e) {
@@ -87,17 +100,19 @@ class Index extends Component {
               textBool={this.state.textBool}
             />
           )}
-          <audio
-            ref={audio => {
-              this.audio = audio;
-            }}
-            src={track}
-          />
+          {this.state.snoopVid && (
+            <Video2
+              answers={Object.values(this.state.answers)}
+              textBool={this.state.textBool}
+            />
+          )}
         </div>
         <div>
           <form
             onSubmit={this.handleSubmit}
-            className={this.state.video ? 'fadeOut' : 'normForm'}
+            className={
+              this.state.video || this.state.snoopVid ? 'fadeOut' : 'normForm'
+            }
           >
             <p id="welcome">Welcome To The Dance</p>
             {this.state.questionBank.slice(0, 3).map((ques, idx) => {
@@ -119,7 +134,7 @@ class Index extends Component {
             <button
               id="buttons"
               type="submit"
-              value="Just Beginning"
+              value="This Whole Time"
               onClick={this.handlePlay}
             >
               This Whole Time
@@ -128,7 +143,7 @@ class Index extends Component {
               id="buttons"
               type="submit"
               value="Just Beginning"
-              onClick={this.handlePlay}
+              onClick={this.handleSnoopVid}
             >
               Just Beginning
             </button>
