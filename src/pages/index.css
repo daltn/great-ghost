@@ -42,6 +42,10 @@
   color: #2e75f1;
 }
 
+#audio {
+  opacity: 0;
+}
+
 #questions {
   margin-bottom: 10vh;
 }

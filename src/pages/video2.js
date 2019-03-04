@@ -5,6 +5,7 @@ const Video2 = props => {
   return (
     <div className="vimeo-wrapper">
       <audio
+        id="audio"
         ref={audio => {
           return 'audio_tag';
         }}
