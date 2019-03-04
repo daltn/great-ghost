@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700');
 
 .vimeo-wrapper {
   position: fixed;
@@ -25,7 +26,7 @@
 
 #bod {
   position: flex;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   color: white;
   text-align: left;
   font-size: 5vh;
@@ -75,45 +76,51 @@ h1 {
 
 #ansrBefore0 {
   font-size: 10vh;
-  margin-right: 20vw;
-  opacity: 0.5;
+  margin-right: 10vw;
+  opacity: 0;
   transition: all 3s ease-out 5s;
 }
 
 #ansrAfter0 {
-  font-size: 3vh;
+  font-size: 15vh;
   margin-right: 15vw;
   opacity: 0;
   transition: all 3s ease-out 5s;
 }
 
 #ansrBefore1 {
+  font-size: 30vh;
   margin-left: 10vw;
   width: 80%;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: all 5s ease-in;
 }
 
 #ansrAfter1 {
-  margin-left: 50vw;
+  margin-left: 40vw;
+  margin-bottom: -10vh;
   width: 0;
   opacity: 0;
   transition: all 5s ease-out;
 }
 
 #ansrBefore2 {
+  text-align: left;
+  font-size: 20vh;
   margin-left: 20vw;
-  opacity: 0.5;
-  transition: all 3s ease-out 5s;
+  margin-bottom: -60vh;
+  opacity: 0.8;
+  transition: all 10s ease-out;
 }
 
 #ansrAfter2 {
-  margin-left: 10vw;
+  margin-left: 5vw;
   opacity: 0;
-  transition: all 1s ease-out;
+  transition: all 10s ease-out;
 }
 
 .formInput {
+  font-family: 'Noto Sans', sans-serif;
   display: block;
   margin: auto;
   font-size: 5vh;
@@ -144,6 +151,7 @@ h1 {
 
 button {
   background-color: transparent;
+  font-family: 'Noto Sans', sans-serif;
   border: 1px solid white;
   border-radius: 8px;
   color: white;
