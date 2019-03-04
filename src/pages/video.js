@@ -5,13 +5,13 @@ const Video = props => {
   return (
     <div className="vimeo-wrapper">
       <audio
-        id="audio"
         ref={audio => {
           return 'audio_tag';
         }}
         src={roses}
         controls
         autoPlay
+        id="audio"
       />
       <iframe
         title="roses video by great ghost"
