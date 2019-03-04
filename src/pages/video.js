@@ -14,7 +14,7 @@ const Video = props => {
         autoPlay
       />
       <iframe
-        title="roses"
+        title="roses video by great ghost"
         id="video"
         src="https://player.vimeo.com/video/310698430?background=1&autoplay=1&muted=1&byline=0&title=0"
         frameBorder="0"

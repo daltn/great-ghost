@@ -14,7 +14,7 @@ const Video2 = props => {
         autoPlay
       />
       <iframe
-        title="snoop"
+        title="snoop video by great ghost"
         id="video"
         src="https://player.vimeo.com/video/317325586?background=1&autoplay=1&muted=1&byline=0&title=0"
         frameBorder="0"
