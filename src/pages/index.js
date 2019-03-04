@@ -149,9 +149,9 @@ class Index extends Component {
             </button>
           </form>
         </div>
-        <footer id="footer">
+        <p id="footer">
           dev by <a href="https://pulse-code.com/">pulse-code</a>{' '}
-        </footer>
+        </p>
       </div>
     );
   }
