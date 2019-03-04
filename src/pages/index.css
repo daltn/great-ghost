@@ -46,6 +46,23 @@
   opacity: 0;
 }
 
+#footer {
+  text-align: right;
+  font-size: 2vh;
+  margin-top: 30vh;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #2e75f1;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
 #questions {
   margin-bottom: 10vh;
 }
