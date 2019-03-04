@@ -148,7 +148,8 @@ class Index extends Component {
               Just Beginning
             </button>
             <p id="footer">
-              dev by <a href="https://pulse-code.com/">pulse-code</a>{' '}
+              music & video by great ghost / dev by{' '}
+              <a href="https://pulse-code.com/">pulse-code</a>{' '}
             </p>
           </form>
         </div>
