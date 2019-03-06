@@ -80,13 +80,14 @@ h1 {
   text-align: left;
   font-size: 15vh;
   margin-left: 15vw;
+  width: 80%;
   opacity: 0.9;
   transition: all 3s ease-out 2s;
 }
 
 #ansrAfter0 {
-  /* margin-right: 10vw; */
   opacity: 0;
+  width: 20%;
   transition: all 3s ease-out 2s;
 }
 
@@ -100,8 +101,7 @@ h1 {
 
 #ansrAfter1 {
   margin-left: 40vw;
-  margin-bottom: -10vh;
-  width: 0;
+  width: 50%;
   opacity: 0;
   transition: all 5s ease-out;
 }
@@ -109,14 +109,16 @@ h1 {
 #ansrBefore2 {
   text-align: right;
   font-size: 15vh;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
+  width: 80%;
   opacity: 0.9;
   transition: all 10s ease-out;
 }
 
 #ansrAfter2 {
-  margin-left: 5vw;
+  margin-bottom: 40vh;
   opacity: 0;
+  width: 20%;
   transition: all 10s ease-out;
 }
 
