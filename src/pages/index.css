@@ -172,6 +172,7 @@ button {
 button:hover {
   background-color: white;
   color: #2e75f1;
+  cursor: pointer;
 }
 
 body {

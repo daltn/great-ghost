@@ -150,7 +150,7 @@ class Index extends Component {
             <p id="footer">
               music & video by{' '}
               <a href="mailto:adequateghost@gmail.com">great ghost</a> / dev by{' '}
-              <a href="https://pulse-code.com/">pulse-code</a>{' '}
+              <a href="https://daltonsaffe.com/">dalton saffe</a>{' '}
             </p>
           </form>
         </div>
