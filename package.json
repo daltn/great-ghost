@@ -14,7 +14,7 @@
   "dependencies": {
     "@vimeo/player": "^2.8.0",
     "eslint-config-prettier": "^3.4.0",
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
